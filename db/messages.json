@@ -1,0 +1,12 @@
+{
+  "room":{
+    "_id":"59d79f03b5bea6190db8116b",
+    "messages":[]
+  },
+  "messageData":{
+    "sendUser":"59d73b3ea7663e0c240450fd",
+    "contents":"你不要命了？",
+    "roomId":"59d79f03b5bea6190db8116b",
+    "sendTime":"Fri Oct 06 2017 23:24:46 GMT+0800 (CST)"
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chattingOnline</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="lib/jquery-3.1.1.min/jquery-3.1.1.min.js"></script>
+    <script src="./javascripts/master.js"></script>
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    <script src="lib/layer/layer.js"></script>
+</head>
+
+<body>
+<div id="modal-overlay">
+    <div class="modal-data" style="display: block">
+        <div class="nav" id="tab" style="margin-left: 160px">
+            <ul>
+                <li class="cur">登陆 </li>
+                <li>注册 </li>
+            </ul>
+        </div>
+        <div class="detail" id="loginOrSignInContent">
+            <div name="content" id="loginTab" class="con"  style="display: block">
+                <form id="loginForm" style="line-height: 60px">
+                    <input style="width: 380px" id="loginEmail" type="email" placeholder="请输入邮箱...">
+                    <input style="width: 380px" id="loginPassword" type="password" placeholder="请输入密码...">
+                    <div id="loginButton" style="width: 380px;display: inline-block">
+                        <button  type="submit" value="登陆">登陆</button>
+                        <button  type="button" onclick="loginModel()" value="关闭">关闭</button>
+                    </div>
+                </form>
+            </div>
+            <div name="content" id="signInTab" class="con">
+                <form id="signInForm" style="line-height: 60px">
+                    <input style="width: 380px" id="signUpUserName" type="text" placeholder="请输入用户名...">
+                    <input style="width: 380px" id="signUpEmail" type="email" placeholder="请输入邮箱...">
+                    <input style="width: 380px" id="signUpPassword" type="password" placeholder="请输入密码...">
+                    <input style="width: 380px" id="repeatPassword" type="password" placeholder="请再次输入密码...">
+                    <div id="signInButton" style="width: 380px;display: inline-block">
+                        <button  type="submit" value="注册">注册</button>
+                        <button  type="button" onclick="loginModel()" value="关闭">关闭</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display: inline;height: 500px">
+    <div id="channelNav" style="height: 480px; width:200px;float:left;overflow: auto;margin-top: 60px;margin-left: 10px">
+        <ul id="roomArea" style="width: 150px;float: left">
+
+        </ul>
+    </div>
+    <div id="userCenter" class="userDisplay" style="float: right;display: none;margin-right: 50px">
+        <span  id="userName"></span>
+        <button id="logoutButton" style="background-color: #ea9448;border-radius: 10px">注销</button>
+    </div>
+    <div id="chattingRoom" style="overflow:hidden;width: 600px;float: left;margin-left: 80px">
+    <div id="container" style="margin-top: 60px; height: 550px;width: 600px;overflow: auto">
+
+    </div>
+
+    <div id="signInModelButton" style="float: left;display: none">
+        <button onclick="loginModel()" style="font-size: 16px;margin-left: 100px; width: 260px;height: 60px;border-radius:8px;background:#ea9448;color: #ffffff;">
+            Sign In Chatting Online
+        </button>
+    </div>
+
+    <div id="chatInput" style="height: 200px;float: left;display: none;margin-top: 40px;margin-left: 25px">
+        <textarea style="height: 8em;width: 26em;overflow: auto;display: inline" type="text" id="sendInputText" placeholder="请输入您要发送的信息..."></textarea>
+        <button class="sendButton"id="sendInputButton" style="display: inline">发送</button>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
